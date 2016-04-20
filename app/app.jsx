@@ -4,6 +4,9 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} =  require('react-router');
 var Main = require('Main');
 var Nav = require('Nav');
+var Timer = require('Timer');
+var Countdown = require('Countdown');
+var About = require('About');
 
 
 
@@ -17,6 +20,9 @@ require('style!css!sass!applicationStyles');
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Main}>
+			<IndexRoute component={Timer}/>
+			<Route path="/countdown" component={Countdown}/>
+			<Route path="/about" component={About}/>
 
 		</Route>
 	</Router>,
