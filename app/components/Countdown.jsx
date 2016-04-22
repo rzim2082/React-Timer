@@ -6,7 +6,7 @@ var Countdown = React.createClass({
 	getInitialState: function(){
 		return {
 			count: 0,
-			countdownStatus: 'stopped'
+			countdownStatus: 'paused'
 		};
 	},
 	componentDidUpdate: function(prevProps, prevState){
@@ -25,7 +25,7 @@ var Countdown = React.createClass({
 				count: newCount >= 0 ? newCount : 0 
 			});
 
-			
+
 		}, 1000)
 	},
 	handleSetCountdown: function (seconds) {
